@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+        div {
+            height: 400px;
+            width: 600px;
+            border: 2px solid black;
+            background-color: red;
+            font-size: 3rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        button {
+            display: block;
+            width: 300px;
+            padding: 6px 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="red__box"></div>
+    <button id="btn">Click This</button>
+
+    <script>
+        const box = document.getElementById('red__box');
+        const btn = document.getElementById('btn');
+
+        box.addEventListener("mouseover", function1); 
+        box.addEventListener("mouseout", function2); 
+        btn.addEventListener("click", function3);
+        
+        function function1() {
+            box.innerText = "Mouse Over Listener";
+            box.style.backgroundColor = "none";
+            box.style.backgroundImage = "url('picture.jpg')";
+            box.style.backgroundSize = "cover";
+        }
+        function function2() {
+            box.innerText = "Mouse Out Listener";
+            box.style.backgroundColor = "red";
+            box.style.backgroundImage = "";
+        }
+        function function3() {
+            box.innerText = "SURPRISE!!!";
+        }
+    </script>
+</body>
+</html>

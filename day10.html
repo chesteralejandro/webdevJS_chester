@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <button onClick="myFunction()">Click to enter name</button>
+    <h1 id="name"></h1>
+    <script>
+        function myFunction() {
+            var name;
+            var container1 = prompt("What is your first name?");
+            var container2 = prompt("What is your middle name?");
+            var container3 = prompt("What is your last name?");
+
+
+            if(container1 == null || container1 == "" || container2 == null || container2 == "" || container3 == null || container3 == "") {
+                name = "Please give your full name.";
+            } else {
+                name = "Your name is " + container1 + " " + container2 + " " + container3;
+            }
+            document.getElementById('name').innerText = name;
+        }
+    </script>
+</body>
+</html>
